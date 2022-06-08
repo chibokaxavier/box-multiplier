@@ -1,6 +1,5 @@
 
 let resultbtn = document.getElementById("resultt")
-
 let message = ''
 
 // let result = 0
