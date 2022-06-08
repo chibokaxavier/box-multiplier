@@ -1,9 +1,20 @@
-input {
+input.number-box {
     width:50px;
     height:50px;
     margin-top: 0px;
-    display: inline-block;
+    border:2px solid blue ;
+    /* display: inline-block; */
+    font-size: 120%;
+    text-align: center;
+    
 }
+
+input.number-box:hover {
+    box-shadow: 5px 5px #888888;
+    border: 2px solid red;
+}
+
+
 
 dir{
     background-color: brown; 
@@ -16,5 +27,42 @@ dir{
 #resultt {
     width: 500px;
     border: 2px solid black;
-    height: 50px;
+    height: 70px;
+}
+div {
+    display: inline-block;
+    
+    /* margin-top: 50px; */
+}
+.hidden{
+    display:none;
+}
+#reset {
+
+    width: 60px;
+    height: 23px;
+    border-radius: 4px;
+    text-align: center;
+    /* font-size: 11px; */
+    background-color: red;
+    border: 0;
+    color: white;
+    /* padding: 10px 10px; */ 
+
+}
+#multiplier {
+    background-color: green;
+    border-radius: 4px;
+    color: white;
+    border: 0;
+    font-size: ;
+    padding: 10px 10px;
+
+}
+#addmore {
+    background-color: blue;
+    border: 0;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 10px;
 }

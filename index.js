@@ -1,57 +1,48 @@
-
+document.querySelectorAll(".number-box").forEach(function (element) {
+    element.addEventListener('click',function(){
+        console.log('clicked')
+    })
+    
+})
 let resultbtn = document.getElementById("resultt")
-let message = ''
+function multiply(event) {
+    event.preventDefault()
+    // total, will hold the result of the multiplication
+    let total = 1
 
-// let result = 0
-
-function multiply() {
-
-    
-
-    // get val of num 1
-    let num1 = Number(document.getElementById("num-1").value)
-
-    // get val of num 2
-    let num2 = Number(document.getElementById("num-2").value)
-
-   
-    // multiply
-    let result = num1 * num2
-     console.log(result)
-
-     if (result%5 === 0) {
-
-        message = 'Is it Divisible by 5 ? Yes\n'
-    
-        
+    document.querySelectorAll(".number-box").forEach(element => {
+        console.log(element.value)
+        total *= element.value
+        console.log(total)
+    })
+    document.querySelector("#my-div").classList.remove("hidden")
+    if (total % 5 === 0) {
+        document.querySelector("#ch-div-b-5").checked = true
     } else {
-        message = " is your answer divisible by 5? no \n"
-    } 
-
-    if (result%2 === 0) {
-
-        message1 = 'Is it an Even number ? Yes\n'
-    
-        
+        document.querySelector("#ch-div-b-5").checked = false
+    }
+    if (total % 2 === 0) {
+        document.querySelector("#ch-even").checked = true
     } else {
-        message1 = " is it an even number? no\n"
-    } 
-
-resultbtn.innerText = result  + "\n" + message + message1
-    
+        document.querySelector("#ch-even").checked = false
+    }
+    // resultbtn.innerText = total 
 }
 
-function resetDiv(){
+document.querySelector("#mform").addEventListener('submit', multiply)
 
-resultbtn.textContent = ""
-    
+function resetDiv() {
+    document.querySelector("#my-div").classList.add("hidden")
+
 }
 
-
-
-
-
-
+function addMore() {
+    let new_input = document.createElement('input')
+    new_input.className = "number-box"
+    new_input.required = true
+    new_input.type = "number"
+    document.querySelector("#box-container").appendChild(new_input)
+}
 
 
 
